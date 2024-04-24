@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(65, 64, 64);
+    color:white;
+    padding:10px;
+}
+nav a{
+    color:white;
+    text-decoration: none;
+    margin:0 10px;
+}
+table{
+    width:100%;
+    margin:0 auto;
+}
+.table table th,.test table th{
+    background-color: rgb(65, 64, 64);
+    color:white;
+    padding:10px;
+    min-width:10%;
+    position: sticky;
+    top:0;
+}
+.table table td, .test table td{
+    white-space: pre-line;
+    padding:8px;
+    font-size: 18px;
+}
+.table table td:nth-child(n+3){
+    text-align: center;
+}
+.table table tbody tr, .test table tbody tr{
+    background-color: rgba(208,215,217,255);
+}
+.table table tbody tr:hover{
+    background-color: grey;
+}
+.table table tbody tr:nth-child(2n), .test table tbody tr:nth-child(2n){
+    background-color: rgba(233,236,237,255);
+}
+.table table tbody tr:nth-child(2n):hover{
+    background-color: grey;
+}
+.test{
+    display:flex;
+    flex-wrap: wrap;
+    width:90%;
+    margin:0 auto;
+    justify-content: center;
+    margin-top:20px;
+}
+.test table{
+    width:35%;
+    margin:10px;
+}
+.test th{
+    text-align: left;
+    color:white;
+}
+.test tr td:nth-child(1){
+    width:80%;
+}
+.test tr td:nth-child(2){
+    text-align:center;
+}
+.test .swle5 th{
+    background-color: rgba(0,107,99,255);
+}
+.test .swle6 th{
+    background-color: rgba(77,123,135,255);
+}

@@ -1,0 +1,39 @@
+<nav>
+    <a href="/">Home page</a>
+    <a href="/chart?id={{context.id}}">Chart</a>
+</nav>
+<div class="test">
+    <table class="swle5">
+        <thead>
+            <th colspan="2">Number of SWE.2 SW Arch Design</th>
+        </thead>
+        <tbody>
+                {{> SWLE5_adesign}}
+        </tbody>
+
+    </table>
+    <table class="swle6">
+        <thead>
+            <th colspan="2">Number of SWE.1 SW Arch Design</th>
+        </thead>
+        <tbody>
+                {{> SWLE6_adesign}}
+        </tbody>
+    </table>
+    <table class="swle5">
+        <thead>
+            <th colspan="2">Number of SWE.2 SW Arch Design</th>
+        </thead>
+        <tbody>
+            {{> SWLE5_tests}}
+        </tbody>
+    </table>
+    <table class="swle6">
+        <thead>
+            <th colspan="2">Number of SWE.1 SW Arch Design</th>
+        </thead>
+        <tbody>
+            {{> SWLE6_tests}}
+        </tbody>
+    </table>
+</div>
