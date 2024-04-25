@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 nav{
-    background-color: rgb(65, 64, 64);
+    background-color:rgb(65, 64, 64) ;
     color:white;
     padding:11px;
 }
@@ -71,4 +71,11 @@ table{
 }
 .test .swle6 th{
     background-color: rgba(77,123,135,255);
+}
+.press{
+    text-decoration: none;
+    color:white;
+    background-color:rgb(65, 64, 64);
+    padding:5px;
+    border-radius: 20px;
 }

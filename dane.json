@@ -63,12 +63,12 @@
                 "name":"MLB - 100%",
                 "tbr":"0",
                 "ir":"0",
-                "accepted":"2447",
-                "nt":"495",
-                "tip":"2942",
-                "tnot":"753",
-                "npoat":"753 / 100%",
-                "npomt":"0 / XX%",
+                "accepted":"88",
+                "nt":"0",
+                "tip":"88",
+                "tnot":"61",
+                "npoat":"61 / 100%",
+                "npomt":"0 / 0%",
                 "paccepted":"100%",
                 "ptotal":"100%"
             }
@@ -88,6 +88,20 @@
                 "npomt":"0 / 0%",
                 "paccepted":"96%",
                 "ptotal":"96%"
+            },
+            {
+                "pid":1,
+                "name":"MLB - 91%",
+                "tbr":"0",
+                "ir":"1",
+                "accepted":"488",
+                "nt":"1",
+                "tip":"490",
+                "tnot":"321",
+                "npoat":"321 / 100%",
+                "npomt":"0 / 0%",
+                "paccepted":"100%",
+                "ptotal":"99%"
             }
         ],
         "results":["Pass 75%; Fall 25%: Skip 0%","Pass81%; Fall 19%: Skip 0%"]

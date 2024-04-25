@@ -4,9 +4,9 @@
     <td>{{deList swle5}}</td>
     <td>{{deList swle6}}</td>
     <td>{{deList results}}</td>
-    <td>
+    <td style="display:flex;flex-direction:column;gap:2px">
         {{#each swle5}}
-            <a href="/info?id={{../id}}&pid={{pid}}">press</a>
+            <a class="press" href="/info?id={{../id}}&pid={{pid}}">press</a>
         {{/each}}
     </td>
 </tr>
