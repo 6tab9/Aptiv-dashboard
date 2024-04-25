@@ -17,6 +17,14 @@ helpers: {
                     delistedList+=el+"\n"
             })
             return delistedList
+        },
+        realName:function(fakeName){
+            if(fakeName.includes(" ")){
+                return fakeName.split(" ")[0]
+            }
+            else{
+                return "Press"
+            }
         }
     }
 }));   // domyślny layout, potem można go zmienić

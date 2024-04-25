@@ -29,7 +29,18 @@
       npomt: 0 / XX%
       paccepted: 100%
       ptotal: 100%
-    - G70_TAF 100% 100%
+    - pid: 2
+      name: G70_TAF 100%
+      tbr: 'XX'
+      ir: 'XX'
+      accepted: 'XX'
+      nt: 'XX'
+      tip: 'XX'
+      tnot: 'XX'
+      npoat: XX / XX%
+      npomt: 0 / XX%
+      paccepted: XX%
+      ptotal: XX%
   swe6:
     - Only SW integration tests planned for project
   results:

@@ -33,7 +33,20 @@
                 "paccepted":"100%",
                 "ptotal":"100%"
             },
-            "G70_TAF 100% 100%"
+            {
+                "pid":2,
+                "name":"G70-TAF 100%",
+                "tbr":"0",
+                "ir":"0",
+                "accepted":"2447",
+                "nt":"495",
+                "tip":"2942",
+                "tnot":"753",
+                "npoat":"753 / 100%",
+                "npomt":"0 / XX%",
+                "paccepted":"100%",
+                "ptotal":"100%"
+            }
         ],
         "swe6":["Only SW integration tests planned for project"],
         "results":["Pass 99.8%; Fall 0.2%; Skip 0%","Pass 99.8%; Fall 0.2%; Skip 0%","Pass 99.8%; Fall 0.2%; Skip 0%"]
