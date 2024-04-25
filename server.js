@@ -31,7 +31,17 @@ app.get("/", function (req, res) {
     res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku
 })
 app.get("/info", function (req, res) {
-    console.log(req.query.id)
+    let swle5 = []
+    let swle6 = []
+    context.map(el=>{
+        if(el.id==req.query.id){
+            el.swle5.map(elem=>{
+                if(elem.name.split(" ")[0]==req.query.name.split("%20")[0]){
+                    console.log(elem)
+                }
+            })
+        }
+    })
 })
 app.get("/chart", function(req,res){
     res.render('chart.hbs', {id:req.query.id});
