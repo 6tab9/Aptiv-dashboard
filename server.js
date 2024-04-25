@@ -21,7 +21,8 @@ helpers: {
 app.set('view engine', 'hbs');                           // określenie nazwy silnika szablonów
 
 const context = require("C:\\Users\\yf6ch6\\jednak_express\\dane.json")
-
+const context3 = require("C:\\Users\\yf6ch6\\jednak_express\\dane.yml")
+console.log(context3)
 app.get("/", function (req, res) {
     
     res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku

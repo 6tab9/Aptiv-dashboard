@@ -1,0 +1,130 @@
+---
+- id: 0
+  project:
+  - BMW CP60 MPAD
+  po:
+  - Ga, Sindhu
+  swe5:
+  - pid: 0
+    name: CP60_High 100%
+    tbr: '0'
+    ir: '0'
+    accepted: '2778'
+    nt: '495'
+    tip: '3273'
+    tnot: '1099'
+    npoat: 1099 / 100%
+    npomt: 0 / 0%
+    paccepted: 100%
+    ptotal: 100%
+  - pid: 1
+    name: CP60_Addon 100%
+    tbr: '0'
+    ir: '0'
+    accepted: '2447'
+    nt: '495'
+    tip: '2942'
+    tnot: '753'
+    npoat: 753 / 100%
+    npomt: 0 / XX%
+    paccepted: 100%
+    ptotal: 100%
+  - G70_TAF 100% 100%
+  swe6:
+  - Only SW integration tests planned for project
+  results:
+  - Pass 99.8%; Fall 0.2%; Skip 0%
+  - Pass 99.8%; Fall 0.2%; Skip 0%
+  - Pass 99.8%; Fall 0.2%; Skip 0%
+- id: 1
+  project:
+  - 10057226 MY Audi DMS Gen2 Driver Camera
+  po:
+  - Sudharsen, Thangaraj
+  swe5:
+  - pid: 0
+    name: MAX - 91%
+    tbr: '0'
+    ir: '0'
+    accepted: '307'
+    nt: '0'
+    tip: '307'
+    tnot: '75'
+    npoat: 75 / 100%
+    npomt: 0 / 0%
+    paccepted: 91%
+    ptotal: 91%
+  - pid: 1
+    name: MLB - 100%
+    tbr: '0'
+    ir: '0'
+    accepted: '88'
+    nt: '0'
+    tip: '88'
+    tnot: '61'
+    npoat: 61 / 100%
+    npomt: 0 / 0%
+    paccepted: 100%
+    ptotal: 100%
+  swe6:
+  - pid: 0
+    name: MAX - 91%
+    tbr: '0'
+    ir: '1'
+    accepted: '620'
+    nt: '24'
+    tip: '645'
+    tnot: '422'
+    npoat: 422 / 100%
+    npomt: 0 / 0%
+    paccepted: 96%
+    ptotal: 96%
+  - pid: 1
+    name: MLB - 91%
+    tbr: '0'
+    ir: '1'
+    accepted: '488'
+    nt: '1'
+    tip: '490'
+    tnot: '321'
+    npoat: 321 / 100%
+    npomt: 0 / 0%
+    paccepted: 100%
+    ptotal: 99%
+  results:
+  - Pass 75%; Fall 25%; Skip 0%
+  - Pass81%; Fall 19%; Skip 0%
+- id: 2
+  project:
+  - ADCAM
+  po:
+  - Sudharsen, Thangaraj
+  swe5:
+  - pid: 0
+    name: 100%
+    tbr: '0'
+    ir: '0'
+    accepted: '7385'
+    nt: '0'
+    tip: '7385'
+    tnot: '9446'
+    npoat: 4093 / 43.3%
+    npomt: 5353 / 56.6%
+    paccepted: 100%
+    ptotal: 100%
+  swe6:
+  - pid: 0
+    name: 100%
+    tbr: '0'
+    ir: '0'
+    accepted: 9588 9700-Tested
+    nt: '3'
+    tip: '9703'
+    tnot: '7037'
+    npoat: 1545 / 21.9%
+    npomt: 5492 / 78%
+    paccepted: 99.9%
+    ptotal: 99.9%
+  results:
+  - Pass 100%; Fall 0%; Skip 0%
+...
