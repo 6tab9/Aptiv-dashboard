@@ -36,7 +36,7 @@
             "G70_TAF 100% 100%"
         ],
         "swe6":["Only SW integration tests planned for project"],
-        "results":["Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%"]
+        "results":["Pass 99.8%; Fall 0.2%; Skip 0%","Pass 99.8%; Fall 0.2%; Skip 0%","Pass 99.8%; Fall 0.2%; Skip 0%"]
     },
     {
         "id":1,
@@ -104,7 +104,7 @@
                 "ptotal":"99%"
             }
         ],
-        "results":["Pass 75%; Fall 25%: Skip 0%","Pass81%; Fall 19%: Skip 0%"]
+        "results":["Pass 75%; Fall 25%; Skip 0%","Pass81%; Fall 19%; Skip 0%"]
     },
     {
         "id":2,
@@ -143,6 +143,6 @@
                 "ptotal":"99.9%"
             }
         ],
-        "results":["Pass 100%; Fall 0%: Skip 0%"]
+        "results":["Pass 100%; Fall 0%; Skip 0%"]
     }
 ]
