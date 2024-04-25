@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
     res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku
 })
 app.get("/info", function (req, res) {
-    let swle5 = {
+    let swe5 = {
         "tbr":"XX",
         "ir":"XX",
         "accepted":"XX",
@@ -39,7 +39,7 @@ app.get("/info", function (req, res) {
         "paccepted":"XX %",
         "ptotal":"XX %"
     }
-    let swle6 = {
+    let swe6 = {
         "tbr":"XX",
         "ir":"XX",
         "accepted":"XX",
@@ -53,19 +53,19 @@ app.get("/info", function (req, res) {
     }
     context.map(el=>{
         if(el.id==req.query.id&&req.query.pid.length>0){
-            el.swle5.map(elem=>{
+            el.swe5.map(elem=>{
                 if(elem.pid==req.query.pid){
-                        swle5 = elem
+                        swe5 = elem
                 }
             })
-            el.swle6.map(elem=>{
+            el.swe6.map(elem=>{
                 if(elem.pid==req.query.pid){
-                            swle6 = elem
+                            swe6 = elem
                 }
             })
         }
     })
-    res.render('id.hbs',{swle5:swle5,swle6:swle6})
+    res.render('id.hbs',{swe5:swe5,swe6:swe6})
 })
 app.get("/chart", function(req,res){
     res.render('chart.hbs', {id:req.query.id});

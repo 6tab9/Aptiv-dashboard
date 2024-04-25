@@ -66,10 +66,10 @@ table{
 .test tr td:nth-child(2){
     text-align:center;
 }
-.test .swle5 th{
+.test .swe5 th{
     background-color: rgba(0,107,99,255);
 }
-.test .swle6 th{
+.test .swe6 th{
     background-color: rgba(77,123,135,255);
 }
 .press{

@@ -51,13 +51,13 @@ data: {
     datasets:[
         {
             data: yValues,
-            label:"SWLE.5 test",
+            label:"swe.5 test",
             fill:false,
             borderColor:'red'
         },
         {
             data: yValues2,
-            label:"SWLE.5 test",
+            label:"swe.5 test",
             fill:false,
             borderColor:'blue'
         }
