@@ -3,6 +3,8 @@ const app = express()
 const PORT = 3000;
 const path = require("path")
 const hbs = require('express-handlebars');
+const yaml = require('js-yaml');
+const fs   = require('fs');
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
 app.engine('hbs', hbs.engine({ defaultLayout: 'main.hbs', extname: '.hbs', partialsDir: "views/partials",
 helpers: {         
@@ -19,15 +21,19 @@ helpers: {
     }
 }));   // domyślny layout, potem można go zmienić
 app.set('view engine', 'hbs');                           // określenie nazwy silnika szablonów
+let context
+try {
+  context = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\dane.yml', 'utf8'));
+} catch (e) {
+  console.log(e);
+}
 
-const context = require("C:\\Users\\yf6ch6\\jednak_express\\dane.json")
-const context3 = require("C:\\Users\\yf6ch6\\jednak_express\\dane.yml")
-console.log(context3)
 app.get("/", function (req, res) {
     
     res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku
 })
 app.get("/info", function (req, res) {
+
     let swe5 = {
         "tbr":"XX",
         "ir":"XX",
