@@ -28,7 +28,8 @@ helpers: {
         }
     }
 }));   // domyślny layout, potem można go zmienić
-app.set('view engine', 'hbs');                           // określenie nazwy silnika szablonów
+app.set('view engine', 'hbs'); 
+const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json")                          // określenie nazwy silnika szablonów
 let context
 try {
   context = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\dane.yml', 'utf8'));
@@ -66,7 +67,7 @@ app.get("/info", function (req, res) {
         "paccepted":"XX %",
         "ptotal":"XX %"
     }
-    context.map(el=>{
+    swe.map(el=>{
         if(el.id==req.query.id&&req.query.pid.length>0){
             el.swe5.map(elem=>{
                 if(elem.pid==req.query.pid){
