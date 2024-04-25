@@ -12,6 +12,13 @@ helpers: {
                 delistedList+=el+"\n"
             })
             return delistedList
+        },
+        deList2: function (list) {
+            let delistedList = ""
+            list.map(el=>{
+                delistedList+=el.name+"\n"
+            })
+            return delistedList
         }
     }
 }));   // domyślny layout, potem można go zmienić
@@ -24,13 +31,7 @@ app.get("/", function (req, res) {
     res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku
 })
 app.get("/info", function (req, res) {
-    let currcontext = {}
-    context2.map(el=>{
-        if(el.id==req.query.id)
-            currcontext = el
-    })
-    console.log(currcontext,req.query.id)
-    res.render('id.hbs', {context:currcontext});   // nie podajemy ścieżki tylko nazwę pliku
+    console.log(req.query.id)
 })
 app.get("/chart", function(req,res){
     res.render('chart.hbs', {id:req.query.id});

@@ -1,8 +1,12 @@
 <tr>
     <td>{{deList project}}</td>
     <td>{{deList po}}</td>
-    <td>{{deList swle5}}</td>
+    <td>{{deList2 swle5}}</td>
     <td>{{deList swle6}}</td>
     <td>{{deList results}}</td>
-    <td><a href="/info?id={{id}}">press</a></td>
+    <td>
+        {{#each swle5}}
+            <a href="/info?id={{name}}">press</a>
+        {{/each}}
+    </td>
 </tr>
