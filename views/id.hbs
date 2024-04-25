@@ -3,16 +3,10 @@
     <a href="/chart?id={{context.id}}">Chart</a>
 </nav>
 <div class="test">
-    {{#if swle6}}
-        <div style="width:50%">
-            {{> SWLE5}}
-        </div>
-        <div style="width:50%">
-            {{> SWLE6}}
-        </div>
-    {{else}}
-        <div style="width:100%">
-            {{> SWLE5}}
-        </div>
-    {{/if}}
+    <div style="width:48%">
+        {{> SWLE5}}
+    </div>
+    <div style="width:48%;margin-left:10px">
+        {{> SWLE6}}
+    </div>
 </div>
