@@ -17,72 +17,7 @@ helpers: {
 }));   // domyślny layout, potem można go zmienić
 app.set('view engine', 'hbs');                           // określenie nazwy silnika szablonów
 
-const context = [
-    {id:0,project:["BMW CP60 MPAD"],po:["Ga, Sindhu"],swle5:["CP60_High 100%","CP60_Addon 100%","G70_TAF 100%"],swle6:["Only SW integration tests planned for project"],results:["Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%"]},
-    {id:1,project:["BMW CP60 MPAD"],po:["Ga, Sindhu","Novac, Woychyeh"],swle5:["CP60_High 100%","CP60_Addon 100%","G70_TAF 100%"],swle6:["Only SW integration tests planned for project"],results:["Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%"]},
-    {id:2,project:["BMW CP60 MPAD"],po:["Ga, Sindhu"],swle5:["CP60_High 100%","CP60_Addon 100%","G70_TAF 100%"],swle6:["Only SW integration tests planned for project"],results:["Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%","Pass 99.8%; Fall 0.2%: Skip 0%"]},
-]
-
-const context2 = [
-    {
-        id:0,
-        swle5:
-            {
-                tbr:"0",
-                ir:"0",
-                accepted:"2778",
-                nt:"495",
-                tip:"3273",
-                tnot:"1099",
-                npoat:"1099 / 100%",
-                npomt:"0 / 0%",
-                paccepted:"100%",
-                ptotal:"100%"
-            },
-        swle6:
-            {
-                tbr:"0",
-                ir:"0",
-                accepted:"2778",
-                nt:"495",
-                tip:"3273",
-                tnot:"1099",
-                npoat:"1099 / 100%",
-                npomt:"0 / 0%",
-                paccepted:"100%",
-                ptotal:"100%"
-            },
-    },
-    {
-        id:1,
-        swle5:
-            {
-                tbr:"0",
-                ir:"0",
-                accepted:"2778",
-                nt:"495",
-                tip:"3273",
-                tnot:"1099",
-                npoat:"1099 / 100%",
-                npomt:"0 / 0%",
-                paccepted:"100%",
-                ptotal:"100%"
-            },
-        swle6:
-            {
-                tbr:"0",
-                ir:"0",
-                accepted:"2778",
-                nt:"495",
-                tip:"3273",
-                tnot:"1099",
-                npoat:"1099 / 100%",
-                npomt:"0 / 0%",
-                paccepted:"100%",
-                ptotal:"100%"
-            },
-    }
-]
+const context = require("C:\\Users\\yf6ch6\\jednak_express\\dane.json")
 
 app.get("/", function (req, res) {
     
