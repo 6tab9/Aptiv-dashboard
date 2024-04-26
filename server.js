@@ -5,19 +5,19 @@ const path = require("path")
 const hbs = require('express-handlebars');
 const yaml = require('js-yaml');
 const fs   = require('fs');
-const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json")                          // określenie nazwy silnika szablonów
-let data
+const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json") // pobieranie danych z json (z bazy danych)
+let data //pobieranie danych z yamla
 try {
   data = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\Book1.yaml', 'utf8'));
 } catch (e) {
   console.log(e);
 }
 let context = []
-zip()
+zip() // łączenie jsona i yamla
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
 app.engine('hbs', hbs.engine({ defaultLayout: 'main.hbs', extname: '.hbs', partialsDir: "views/partials",
 helpers: {         
-        deList: function (list) {
+        deList: function (list) { //do wyświetlania rekordów
             let delistedList = ""
             if(list!=undefined){
                 list.map(el=>{
@@ -30,7 +30,7 @@ helpers: {
             }
 
         },
-        realName:function(fakeName){
+        realName:function(fakeName){ //skracanie nazwy
             if(fakeName.includes(" ")){
                 return fakeName.split(" ")[0]
             }
@@ -39,16 +39,16 @@ helpers: {
             }
         }
     }
-}));   // domyślny layout, potem można go zmienić
+}));
 app.set('view engine', 'hbs'); 
 
 
 app.get("/", function (req, res) {
-    res.render('table.hbs', {element:context,swe:swe});   // nie podajemy ścieżki tylko nazwę pliku
+    res.render('table.hbs', {element:context});
 })
 app.get("/info", function (req, res) {
 
-    let swe5 = {
+    let swe5 = { //domyślne testy gdyby baza była pusta
         "tbr":"XX",
         "ir":"XX",
         "accepted":"XX",
@@ -72,7 +72,7 @@ app.get("/info", function (req, res) {
         "paccepted":"XX %",
         "ptotal":"XX %"
     }
-    swe.map(el=>{
+    swe.map(el=>{ //wybieranie poprawnego rekordu
         if(el.id==req.query.id&&req.query.pid.length>0){
             el.swe5.map(elem=>{
                 if(elem.pid==req.query.pid){
@@ -89,7 +89,7 @@ app.get("/info", function (req, res) {
     res.render('id.hbs',{swe5:swe5,swe6:swe6})
 })
 app.get("/chart", function(req,res){
-    res.render('chart.hbs', {id:req.query.id});
+    res.render('chart.hbs', {id:req.query.id}); //chart nie działa
 })
 
 function zip(){
