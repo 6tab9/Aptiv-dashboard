@@ -5,6 +5,15 @@ const path = require("path")
 const hbs = require('express-handlebars');
 const yaml = require('js-yaml');
 const fs   = require('fs');
+const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json")                          // określenie nazwy silnika szablonów
+let data
+try {
+  data = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\Book1.yaml', 'utf8'));
+} catch (e) {
+  console.log(e);
+}
+let context = []
+zip()
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
 app.engine('hbs', hbs.engine({ defaultLayout: 'main.hbs', extname: '.hbs', partialsDir: "views/partials",
 helpers: {         
@@ -32,13 +41,7 @@ helpers: {
     }
 }));   // domyślny layout, potem można go zmienić
 app.set('view engine', 'hbs'); 
-const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json")                          // określenie nazwy silnika szablonów
-let context
-try {
-  context = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\Book1.yaml', 'utf8'));
-} catch (e) {
-  console.log(e);
-}
+
 
 app.get("/", function (req, res) {
     res.render('table.hbs', {element:context,swe:swe});   // nie podajemy ścieżki tylko nazwę pliku
@@ -90,7 +93,32 @@ app.get("/chart", function(req,res){
 })
 
 function zip(){
-    
+    data.map(el=>{
+        if(swe[el.id]!=undefined){
+            context.push(
+                {
+                    id:el.id,
+                    project:el.project,
+                    po:el.po,
+                    swe5:swe[el.id].swe5,
+                    swe6:swe[el.id].swe6,
+                    results:el.results
+                }
+            )
+        }
+        else{
+            context.push(
+                {
+                    id:el.id,
+                    project:el.project,
+                    po:el.po,
+                    results:el.results
+                }
+            )
+        }
+
+    })
+    console.log(context)
 }
 
 
