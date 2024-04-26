@@ -10,13 +10,13 @@ let data //pobieranie danych z yamla
 try {
   data = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\Book1.yaml', 'utf8'));
 } catch (e) {
-  console.log(e);
+  console.error(e);
 }
 let context = []
 zip() // łączenie jsona i yamla
 app.set('views', path.join(__dirname, 'views'));         // ustalamy katalog views
 app.engine('hbs', hbs.engine({ defaultLayout: 'main.hbs', extname: '.hbs', partialsDir: "views/partials",
-helpers: {         
+helpers: {    
         deList: function (list) { //do wyświetlania rekordów
             let delistedList = ""
             if(list!=undefined){
@@ -118,7 +118,6 @@ function zip(){
         }
 
     })
-    console.log(context)
 }
 
 
