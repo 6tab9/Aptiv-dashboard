@@ -48,40 +48,15 @@ app.get("/", function (req, res) {
 })
 app.get("/info", function (req, res) {
 
-    let swe5 = { //domyślne testy gdyby baza była pusta
-        "tbr":"XX",
-        "ir":"XX",
-        "accepted":"XX",
-        "nt":"XX",
-        "tip":"XX",
-        "tnot":"XX",
-        "npoat":"XX / XX %",
-        "npomt":"XX / XX %",
-        "paccepted":"XX %",
-        "ptotal":"XX %"
-    }
-    let swe6 = {
-        "tbr":"XX",
-        "ir":"XX",
-        "accepted":"XX",
-        "nt":"XX",
-        "tip":"XX",
-        "tnot":"XX",
-        "npoat":"XX / XX %",
-        "npomt":"XX / XX %",
-        "paccepted":"XX %",
-        "ptotal":"XX %"
-    }
+    let swe5 = {}
+    let swe6 = {}
     swe.map(el=>{ //wybieranie poprawnego rekordu
         if(el.id==req.query.id&&req.query.pid.length>0){
             el.swe5.map(elem=>{
                 if(elem.pid==req.query.pid){
                         swe5 = elem
-                }
-            })
-            el.swe6.map(elem=>{
-                if(elem.pid==req.query.pid){
-                            swe6 = elem
+                        if(el.swe6[req.query.pid].pid==req.query.pid)
+                            swe6 = el.swe6[req.query.pid]
                 }
             })
         }
