@@ -26,7 +26,7 @@ table{
 }
 .table table td, .test table td{
     white-space: pre-line;
-    padding:8px;
+    padding:10px;
     font-size: 18px;
 }
 .table table td:nth-child(n+3){
