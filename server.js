@@ -10,13 +10,16 @@ app.engine('hbs', hbs.engine({ defaultLayout: 'main.hbs', extname: '.hbs', parti
 helpers: {         
         deList: function (list) {
             let delistedList = ""
-            list.map(el=>{
-                if(el.name!=undefined)
-                    delistedList+=el.name+"\n"
-                else
-                    delistedList+=el+"\n"
-            })
-            return delistedList
+            if(list!=undefined){
+                list.map(el=>{
+                    if(el.name!=undefined)
+                        delistedList+=el.name+"\n"
+                    else
+                        delistedList+=el+"\n"
+                })
+                return delistedList
+            }
+
         },
         realName:function(fakeName){
             if(fakeName.includes(" ")){
@@ -32,14 +35,13 @@ app.set('view engine', 'hbs'); 
 const swe = require("C:\\Users\\yf6ch6\\jednak_express\\swe.json")                          // określenie nazwy silnika szablonów
 let context
 try {
-  context = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\dane.yml', 'utf8'));
+  context = yaml.load(fs.readFileSync('C:\\Users\\yf6ch6\\jednak_express\\Book1.yaml', 'utf8'));
 } catch (e) {
   console.log(e);
 }
 
 app.get("/", function (req, res) {
-    
-    res.render('table.hbs', {element:context});   // nie podajemy ścieżki tylko nazwę pliku
+    res.render('table.hbs', {element:context,swe:swe});   // nie podajemy ścieżki tylko nazwę pliku
 })
 app.get("/info", function (req, res) {
 
@@ -86,6 +88,13 @@ app.get("/info", function (req, res) {
 app.get("/chart", function(req,res){
     res.render('chart.hbs', {id:req.query.id});
 })
+
+function zip(){
+    
+}
+
+
+
 app.use(express.static('static'))
 app.listen(PORT, function () {
     console.log("start serwera na porcie " + PORT )

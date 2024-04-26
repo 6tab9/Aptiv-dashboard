@@ -1,0 +1,18 @@
+Project;PO;SWE.5 Test coverage * (Accepted/testable req);SWE.6 Test coverage * (Accepted/testable req);Last test run results * Pass / Fail / Skip
+ BMW CP60 MPAD;Ga, Sindhu;CP60_High 100% * CP60_Addon 100% * G70_TAF 100%;Only SW integration tests * planed for project;Pass 99.8%: Fail 0.2%: Skip 0% * Pass 99.9%: Fail 0.1%: Skip 0% * Pass 99.9%: Fail 0.1%: Skip 0% 
+10057226 MY25 Audi DMS Gen2 Driver Camera;Sudharsan Thangaraj;MAX - 91% * MLB - 100%;MAX - 96% * MLB - 100%;Pass 75%: Fail 25%: Skip 0% * Pass 81%: Fail 19%: Skip 0%
+ADCAM;Sudharsan Thangaraj;100%;99,9%;Pass 100%: Fail 0%: Skip 0%
+10055547 MY25 VGTT DMS;Szymon Rola;0% * Req: Accepted 13 * Implemented 3 * Overall 72;63%;Pass 93%: Fail 7%: Skip 0%
+10056558 MY25 VW MFK GSR ADCAM ECU;Maciej Skrzyszewski;50%;80%;Pass 87%: Fail 10%: Skip 3%
+FORD DAT 2.2;Prasad, Arathy S;100;100;Pass 100%: Fail 0%: Skip 0%
+MOTIONAL FLR4+;Thangaraj, Sudharsan;100;100;Pass 100%: Fail 0%: Skip 0%
+10034446 MY24 Mercedes Benz AG MPIC;Tomasz Nasternak;88%;75%;Pass 12%: Fail 35%: Skip 53%
+10034660 MY23 Iveco IHP * 10055586 MY24 Iveco IC;Konrad Piszczek;2%;52%;Pass 78%: Fail 21%: Skip 0% (manual tests * skip)
+10033971 MY24 Daimler Trucks ICC HMI2.0;Konrad Piszczek;0%;50%;Pass 100%: Fail 0%: Skip 0% (manual tests * skip)
+STLA THUNDER RADAR;Hr, Nagarjun, * Y, Muruganandham;SRR6p - 93% * FLR4 - 91% * FLR4p - 90%;SRR6p - 91% * FLR4 - 96%  FLR4p - 89%;Pass 86%: Fail 8%: Skip 6% * Pass 87%: Fail 9%: Skip 4% * Pass 80%: Fail 10%: Skip 10% 
+10055531 MY27 VT ICM;Sudharsan Thangaraj;0%;0%;SW first delivery in CW20
+10055543 MY26 RNA SWEET 500 SRR7;Sheela Teli;0%;0%;SW first delivery in CW15
+10055591 MY25 Traton SRR6 Plus T;Akhila P;14%;9,4%;Pass 79%: Fail 21%: Skip 0%
+10055632 MY26 Stellantis SMALL Radars;Mahesh Patil;0%;0%;SW first delivery in CW26
+10055633 MY26 Stellantis SMALL Front Camera;Mahesh Patil;0%;0%;SW first delivery in CW26
+VW60NU GEN6;Runu SR;28%;0%;Pass 95%: Fail 5%: Skip 0%

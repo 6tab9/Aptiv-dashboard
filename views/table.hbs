@@ -1,16 +1,31 @@
+<div style="display:flex;flex-direction:row;width:100%;justify-content:space-between">
+    <h1 style="font-size:50px;padding:15px">Projects Metrics</h1>
+    <img width="10%" height="10%" src="gfx/SWTests logo white bcg red font.png" alt="a">
+</div>
 <div class="table">
     <table>
         <thead>
             <th>Project</th>
             <th>PO</th>
-            <th>swe.5 Test coverage</th>
-            <th>swe.6 Test coverage</th>
+            <th>SWE.5 Test coverage</th>
+            <th>SWE.6 Test coverage</th>
             <th>Last test run results <br> Pass/Fall/Skip</th>
             <th>Details</th>
         </thead>
         <tbody>
             {{#each element}}
-                {{> le}}
+                <tr>
+                    <td>{{deList project}}</td>
+                    <td>{{deList po}}</td>
+                    <td>{{deList swe5}}</td>
+                    <td>{{deList swe6}}</td>
+                    <td>{{deList results}}</td>
+                    <td style="display:flex;flex-direction:column;gap:2px">
+                        {{#each swe5}}
+                            <a class="press" href="/info?id={{../id}}&pid={{pid}}">{{realName name}}</a>
+                        {{/each}}
+                    </td>
+                </tr>
             {{/each}}
         </tbody>
     </table>
